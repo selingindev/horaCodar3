@@ -25,12 +25,12 @@
         }
         document.write("EXPLOSAO")
 
-        //Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente. Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
+        //3 -Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente. Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1
         for(i=10; i>0; i--){
             document.write(i)
         }
 
-        // Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+        //4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
         valorSoma = 0;
 
         for(i = 15; i<=100; i++){
@@ -84,7 +84,7 @@
             calcularNovamente = 'nao'}
         }
     
-        //- Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total. caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
+        //7- Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total. caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário. 
 
         console.log('Digite suas notas, uma de cada vez');
         notas = [];
@@ -100,8 +100,52 @@
         soma = notas.reduce((acumulador, notas) => acumulador + notas, 0) / 6;
         console.log('Sua média é: ' + soma)
 
+        //8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO. N  é um valor informado pelo usuário
+        n = parseInt(prompt('Informe seu valor: '))
+        valorInteiro = 1
+        
+        while(n<=0){
+            n = parseInt(prompt('Você digitou um numero menor ou igual a 0. Informe seu valor: '))    
+        }
+        for(i = valorInteiro; i <= n; n--){
+            alert('Seus valores inteiros são: ' + n)
+        }
 
+        // 9- Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100.
+        valorFinal = 110
+        for(i = 101; i <= valorFinal; i++){
+            alert('Os numeros inteiros são: ' + i)
+        }
 
+        // 10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.
+        tabuada = parseInt(prompt('Informe até qual valor você quer: ' ))
+        for(i = 1; i <= tabuada; i++ ){
+            console.log('Tabuada do: ' + i)
+            for(vezes = 1; vezes<=10; vezes++){
+                value = vezes * i
+             alert(vezes + ' * ' + i  + ' = ' + value)
+            }
+            console.log('\n')
+        }
+        
+        //11 - Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.
+        const arraySoma = [];
+        const arrayOther = [];
+
+            for(i = 1; i < 11; i++){
+                    numbers = parseInt(prompt('Digite 10 numeros um de cada vez: '))
+                    if(numbers >= 24 && numbers <= 42){
+                        arraySoma.push(numbers)
+                    }
+                    else{
+                        arrayOther.push(numbers)
+                    }
+                    console.log('Você ja digitou: ' + i + ' numeros' )
+                }
+        // Adicionei essa linha para evitar o erro de referência
+        console.log('A quantidade de numeros entre 24 e 42 é: ' + arraySoma.length )
+        console.log('A quantidade de numeros fora é: ' + arrayOther.length )
+        
     </script>
 </body>
 </html>
